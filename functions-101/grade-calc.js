@@ -2,8 +2,8 @@
 // 15/20 -> You got a C (75%)!
 // A 90-100, B 80-89, C 70-79, D 60-69, F 0-50
 
-let gradeCalc = function (score, possibleScore) {
-    let percent = (score/possibleScore) * 100
+const gradeCalc = function (score, possibleScore) {
+    const percent = (score/possibleScore) * 100
     let letterGrade = ''
     if (score >= 90) {
         letterGrade = 'A'
@@ -21,5 +21,5 @@ let gradeCalc = function (score, possibleScore) {
 
 }
 
-let yourGrade = gradeCalc(89, 100)
+const yourGrade = gradeCalc(89, 100)
 console.log(yourGrade)
