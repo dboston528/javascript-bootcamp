@@ -9,4 +9,8 @@ todo.push('Update website')
 todo.shift();
 
 console.log(`You have ${todo.length} todos!`)
-console.log(todo)
+todo.forEach(function(item, index){
+    const number = index + 1
+    console.log( `${number}. ${item}`)
+
+})
