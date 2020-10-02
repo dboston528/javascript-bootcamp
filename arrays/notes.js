@@ -1,5 +1,17 @@
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-const notes = ['Note 1', 'Note 2', 'Note 3']
+const notes = [{
+    title: "My Next Trip",
+    body: "I would like to go to spain"
+},{
+    title: "Habits to work on",
+    body: "Excersise. Eating a bit better."
+
+},{
+    title: 'Office modification',
+    body: 'Get a new seat'   
+
+}]
 
 // console.log(notes.pop())
 // notes.push('My new note')
@@ -15,6 +27,6 @@ notes.forEach(function (item, index){
     console.log(item)
 })
 
-
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 console.log(notes)
+
+console.log(notes.indexOf('Not3'))
