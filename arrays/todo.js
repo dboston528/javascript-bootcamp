@@ -34,7 +34,24 @@ const getThingsToDo = function (todoList) {
 
 }
 
-console.log(getThingsToDo(todo))
+//sort array so incomplete values show first.
+const sortTodos = function(todos) {
+    todos.sort(function (a,b) {
+        if (a.completed < b.completed){
+            return -1
+        } else if (b.completed < a.completed) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+}
+
+
+sortTodos(todo)
+console.log(todo)
+
+// console.log(getThingsToDo(todo))
 
 // deleteTodo(todo, 'walk dog')
 // console.log(todo)
