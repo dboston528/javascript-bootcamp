@@ -1,6 +1,6 @@
 const todo =  [{
     text:'Create video', 
-    completed: true
+    completed: false
 }, {
     text: 'Cook breakfast',
     completed: true 
@@ -12,7 +12,7 @@ const todo =  [{
     completed: false
 }, {
     text: 'Wash Clothes',
-    completed: true
+    completed: false
 },]
 
 // 1. Convert array to array of objects -> text, completed
@@ -27,5 +27,14 @@ const deleteTodo = function (todoList, text ) {
     if (arrayIndex > -1) todoList.splice(arrayIndex, 1);
 }
 
-deleteTodo(todo, 'walk dog')
-console.log(todo)
+const getThingsToDo = function (todoList) {
+    return todoList.filter(function (todo) {
+        return !todo.completed
+    })
+
+}
+
+console.log(getThingsToDo(todo))
+
+// deleteTodo(todo, 'walk dog')
+// console.log(todo)
