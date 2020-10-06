@@ -1,17 +1,31 @@
-const todo =  ['Create video', 'Cook breakfast', 'Walk dog', 'Take shower', 'Wash clothes']
+const todo =  [{
+    text:'Create video', 
+    completed: true
+}, {
+    text: 'Cook breakfast',
+    completed: true 
+}, {
+    text: 'Walk dog',
+    completed: false
+}, {
+    text: 'Take Shower',
+    completed: false
+}, {
+    text: 'Wash Clothes',
+    completed: true
+},]
 
-// Delete the third item
-// Add a new item to the end
-// remove the first item the list
+// 1. Convert array to array of objects -> text, completed
+// 2. Create function to remove a todo by text value
 
-todo.splice(2,1)
-todo.push('Update website')
-todo.shift();
+const deleteTodo = function (todoList, text ) {
+    const arrayIndex =  todoList.findIndex(function (todo, index) {
+        
+        return todo.text.toLowerCase() === text.toLowerCase()
+        
+    })
+    if (arrayIndex > -1) todoList.splice(arrayIndex, 1);
+}
 
-console.log(`You have ${todo.length} todos!`)
-todo.forEach(function(item, index){
-    const number = index + 1
-    console.log( `${number}. ${item}`)
-
-})
-
+deleteTodo(todo, 'walk dog')
+console.log(todo)
